@@ -26,26 +26,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // get and set toolbar
+        // find toolbar and
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // initialise edit text fields
+        // initialise edit text fields and finds the view in xml file
         number1 = (EditText) findViewById(R.id.editNum1);
         number2 = (EditText) findViewById(R.id.editNum2);
-        // initialise buttons
+
+        // initialise buttons and finds the view in xml file
         btnAddition = (Button) findViewById(R.id.btnAddition);
         btnSubtraction = (Button) findViewById(R.id.btnSubtraction);
         btnDivision = (Button) findViewById(R.id.btnDivision);
         btnMultiply = (Button) findViewById(R.id.btnMultiply);
         btnClear = (Button) findViewById(R.id.btnClear);
-        // initialise result
+
+        // initialise result text view and fin view in xml file
         textResult = (TextView) findViewById(R.id.txtResult);
 
-        // set on click listener to add 2 numbers
+        // set on click listener to addition button to add 2 numbers
         btnAddition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // First checks that both fields contain a number
                 if(number1.getText().length() > 0 && number2.getText().length() > 0) {
                     double num1 = Double.parseDouble(number1.getText().toString());
                     double num2 = Double.parseDouble(number2.getText().toString());
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Set on click listener to subtract 2 numbers
+        // Set on click listener to subtract button to subtract 2 numbers
         btnSubtraction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // set on click listener to clear all fields and put cursor in number1 edit box
+        // set on click listener to clear all fields and put cursor in the top edit box
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

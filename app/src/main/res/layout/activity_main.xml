@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!--Step One: Create custom toolbar
-    In activity_main.xml, Change layout from constraint
-    Go to styles.xml and change theme to NoActionBar
-    Right-click layout folder in res and click new layout resource file. Name toolbar
-    Set properties of new toolbar in toolbar.xml
-
-    Step Two: Calculator Layout
-    In activity_main.xml, start building calculator layout
-
- -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -20,6 +9,7 @@
     android:orientation="vertical"
     tools:context="com.example.sean.app1_calculator.MainActivity">
 
+    <!-- includes custom created toolbar from toolbar.xml -->
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
